@@ -1,0 +1,213 @@
+.container#tema_1
+
+    .header-ecored
+      h1 1. Entrada de datos  
+
+    .jumbotron.bg-white
+      .row.align-items-center
+        .col-auto
+          img(src="assets/images/pages/tema_1/icon_1_01.svg", alt="", style="width:150px")
+        .col
+          p.mb-0 Cuando se usa la consola o el terminal, es común solicitar al usuario introducir datos a través del teclado. A continuación se detallará la codificación para realizar la entrada de información por consola.
+       
+    .jumbotron.bg-white
+      .row
+        .col-12
+          .header-ecored.mt-3#tema1_1
+            h2 1.1 Entrada estándar 
+
+      .row.justify-content-center
+        .col-12
+          p Para solicitar al usuario que introduzca algún dato a través del teclado, se debe usar el método #[strong input().]
+
+          p.mb-0 Este método recibe como parámetro un mensaje al usuario entre comillas:
+
+        .col-12.my-5
+          .console
+            p.cl-gray Ejemplo
+            p.cl-green >>> edad = input(“¿Cuántos años tienes?”)
+            p ¿Cuántos años tienes? 28
+            p.cl-green >>> edad
+            p.mb-0 '21'
+
+        .col-12
+          p.mb-0 Otra forma de realizar la entrada de datos a través del teclado sería:  
+
+        .col-12.my-5
+          .console
+            p.cl-gray Ejemplo:
+            p.cl-gray print("¿Cómo se llama?")
+            p.cl-gray nombre = input()
+            p.cl-gray.mb-0 print("Usted”, nombre, “es un aprendiz SENA: ” )
+
+        .col-12
+          p La entrada siempre es tipo cadena de caracteres #[strong (str)]. Esto es útil para la entrada de datos tales como nombre, ciudad, cargo, deporte, etc.
+
+          p.mb-0 Por tanto, si lo que se necesita es un dato de cierto tipo especial, por ejemplo, un #[strong int], habrá que hacer la conversión correspondiente en #[strong input], de esta manera:
+
+        .col-12.my-5
+          .console
+            p.cl-gray Ejemplo:
+            p.cl-green >>> celular = int(input(“Danos tu número de celular:”))
+            p Danos tu número de celular:  3125320125
+            p.cl-green >>> celular
+            p.mb-0 3125320125
+
+        .col-12
+          p Pero si lo que se requiere es un dato de tipo #[strong #[i float]], habrá que hacer la siguiente conversión:
+
+        .col-12.mt-5
+          .console
+            p.cl-gray Ejemplo:
+            p.cl-green >>> estatura = float(input(“Cuál es tu estatura?”)
+            p Cuál es tu estatura?  1.75
+            p.cl-green >>> estatura
+            p.mb-0 1.75        
+        
+
+    .jumbotron.bg-white
+      .row
+        .col-12
+          .header-ecored.mt-3#tema1_2
+            h2 1.2 Entrada por script
+
+      .row.mb-5
+        .col-12
+          p Hasta ahora se ha escrito código directamente en la consola del intérprete, pero es necesario aprender a realizar programas informáticos que contengan todas las instrucciones en archivos llamados #[i scripts] (o guiones de instrucciones). Luego se envía este archivo al intérprete desde la terminal y se ejecuta todo el bloque de instrucciones. Guzdial y Vidal (2013) recomiendan aplicar buenas prácticas en programación.
+
+          p De esta forma se pueden realizar todas las variaciones deseadas, sencillamente modificando el bloque de instrucciones almacenadas en un archivo con #[strong extensión .py]  
+
+          p Para poder crear y ejecutar scripts se necesita un editor (IDE) y una terminal.
+
+          .jumbotron.mt-5
+            .row.align-items-center
+              .col-auto
+                img(src="assets/images/pages/tema_1/icon_1_2_01.svg", alt="", style="width:150px")
+              .col
+                p.mb-2 #[strong Ejemplo]
+                p Si el bloque de instrucciones se almacena en el archivo #[strong "programa1.py"] en la carpeta #[strong c:\sena] conteniendo las siguientes instrucciones:
+
+          .jumbotron.mt-5
+            .jumbotron.bg-white.mb-5
+              p print("hola, bienvenido a tu primer script")
+              p a=input("digite un nombre")
+              p b=int(input("digite un número"))
+              p print("su nombre es ", a)
+              p print("su número es ", b)
+              p c=b**2
+              p.mb-0 print("el valor del número al cuadrado es", c)
+
+            p.mb-0 Se ejecuta el bloque de instrucciones en el computador digitando este comando:
+
+            .row.my-5
+              .col-auto
+                .jumbotron.bg-white.mb-0
+                  p.mb-0 #[strong c:\sena> python  programa1.py #{"<ENTER>"}]
+
+            .console
+              p C:\sena>python programa1.py
+              p Hola, bienvenido a tu primer script
+              p digite un nombre MARIA
+              p digite un número 5
+              p su nombre es MARIA
+              p su número es 5
+              p.mb-0 el valor del número al cuadrado es 25
+
+            p.mt-5.mb-0 Realizando cambios en las instrucciones y regrabando el archivo, se verifican nuevamente los resultados ejecutando el programa1.py en el intérprete de Python.
+
+      .row.justify-content-center.align-items-center.mb-5
+        .col-12.mb-4
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_duoble_chevron.svg", alt="")
+            .list__txt
+              h3 IDE para Python
+
+        .col-12
+          p Existen múltiples IDE (Entornos de Desarrollo Integrado o #[i Integrated Development Environment]), los cuales pueden usarse para digitar bloques de código en lenguaje Python.
+
+          p Según Salazar (2019), un IDE consta de un editor de código fuente, un resaltador de sintaxis, unas herramientas de construcción automáticas y un depurador. La mayoría de los IDE tienen auto-completado inteligente de código. 
+
+          p Entre los IDE más utilizados para Python tenemos: #[i Sublime Text, PyCharm, Atom, Pythonista, Eclipse, Komodo, CodePad, VIM y Spyder Python].
+
+          p Utilizar el IDLE (#[i Integrated DeveLopment Environment for Python]) el cual es un entorno gráfico que permite editar, guardar y ejecutar programas en Python.
+
+          p IDLE es también un entorno interactivo similar a una consola, en el que se pueden ejecutar instrucciones directas de Python.
+
+          p En Windows, el IDLE viene junto con el intérprete de Python, es decir, al instalar Python en Windows también se instala el IDLE.
+
+      .row.justify-content-center
+        .col-12
+          #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+              li(data-target='#carouselExampleIndicators', data-slide-to='1')              
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='assets/images/pages/tema_1/slider_2_01.png', alt='0')
+              .carousel-item
+                img.d-block.w-100(src='assets/images/pages/tema_1/slider_2_02.png', alt='1')                              
+                                                   
+            a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next      
+        
+        .col-12.mt-5
+          .jumbotron
+            p.mb-0 La ventana del IDLE tiene un tamaño predeterminado que es posible modificar con el menú #[strong #[i Options > Configure IDLE > General.]]  La gama original de colores de la ventana del IDLE se puede modificar con el menú #[strong #[i Options > Configure IDLE > Highlights]].
+
+        .col-12
+          img(src="assets/images/pages/tema_1/slider_2_03.png", alt="", style="width:100%")
+
+        .col-12.mt-5
+          .jumbotron.mb-0
+            p.mb-0 Para crear un nuevo programa se selecciona File New-File, o se oprime el atajo CTRL+N.
+        
+        .col-12.mt-5
+          .jumbotron.mb-0
+            p El IDLE aplica color al texto de acuerdo con su sintaxis. Los colores facilitan identificar los distintos tipos de datos y permiten detectar errores:
+            .list
+              .list__item
+                .list__item__icon
+                  img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+              .list__txt
+                p Las palabras reservadas de Python se muestran en color #[span(style="color:orange" ) naranja].
+            .list
+              .list__item
+                .list__item__icon
+                  img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+              .list__txt
+                p Las cadenas de texto se muestran en #[span(style="color:green" ) verde].
+            .list
+              .list__item
+                .list__item__icon
+                  img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+              .list__txt
+                p Las funciones se muestran en #[span(style="color:purple" ) púrpura].
+            .list
+              .list__item
+                .list__item__icon
+                  img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+              .list__txt
+                p Los resultados de las instrucciones se escriben en #[span(style="color:blue" ) azul].
+            .list
+              .list__item
+                .list__item__icon
+                  img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+              .list__txt
+                p Los mensajes de error aparecen en #[span(style="color:red" ) rojo].
+
+        .col-12.mt-5
+          .jumbotron.mb-0
+            p.mb-0 Para guardar el programa se selecciona File Save o se oprimen CTRL+S. El programa queda almacenado con el nombre deseado y la extensión de Python que es #[strong .py].
+
+        .col-12.mt-5
+          .jumbotron.mb-0
+            p.mb-0 Para ejecutar el programa digitado, seleccionar en el #[strong #[i menú Run > Run Module]]  u oprimir la tecla F5.
+
+
+        

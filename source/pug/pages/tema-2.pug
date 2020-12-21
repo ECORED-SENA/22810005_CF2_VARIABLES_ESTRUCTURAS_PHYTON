@@ -1,0 +1,136 @@
+.container#tema_2
+
+    .header-ecored
+        h1 2. Salida de datos
+
+    .jumbotron.bg-white 
+      .row.justify-content-center
+        .col-12.col-lg-7.my-5
+          img(src="assets/images/pages/tema_2/img_2_01.svg", alt="", style="width:100%")       
+        .col-12
+          p Para lograr la salida de datos se pueden combinar textos y variables separados con comas. Es una buena práctica acompañar esta información con mensajes claros al usuario, de manera tal que este identifique el tipo de dato generado y la unidad de medida en la cual se expresa.
+
+          p.mb-0 Ahora se detallará la sintaxis para codificar la salida de información por pantalla.          
+              
+
+    .jumbotron.bg-white     
+      .row
+        .col-12
+          .header-ecored.mt-3#tema2_1
+            h2 2.1 Sentencia print
+      
+      .row
+        .col-12
+          p Para mostrar datos por pantalla, con frecuencia se utiliza la función #[strong print]. 
+
+          p La sintaxis básica de #[strong print] para presentar un mensaje es mencionando directamente el mensaje o almacenando el mensaje en una variable de texto y luego imprimir la variable, de la siguiente manera:
+        
+        .col-12.my-5
+          .console
+            p.cl-gray Ejemplo:
+            p.cl-green print (“Hola Mundo”)
+            p Hola Mundo
+            p.cl-green texto=”SENA es Colombia”
+            p.cl-green print(texto)
+            p.mb-0 SENA es Colombia
+
+        .col-12
+          p.mb-0 Mientras que si se desea mostrar el valor de una variable numérica, debe hacerlo así:
+
+        .col-12.my-5
+          .console            
+            p.mb-0 print (salario)
+
+        .col-12.mb-5
+          p.mb-0 Dentro del mensaje se pueden utilizar los siguientes caracteres especiales:
+
+        .col-auto.mb-5
+          .jumbotron.mb-0
+            p #[strong \n =  salto de línea.]   ‘\n’ termina la línea y mueve el cursor a otra línea.
+            p.mb-0 #[strong \t = ] es el carácter “tab horizontal" y se usa para simular sangrías de texto.
+
+        .col-12.mb-5
+          p.mb-0 Una forma de colocar varias cadenas de texto o intercalarlas con variables es colocarlas separadas por comas, el lenguaje incluye un espacio entre ellas.  
+
+        .col-12
+          .console
+            p.cl-gray Ejemplo:
+            p.cl-green print (“El salario devengado por “, empleado, “es la suma de “, salario)
+            p El salario devengado por MARIA es la suma de  234500
+            p.cl-green print("El salario devengado por", empleado, "\nes la suma de $", salario)
+            p El salario devengado por MARIA es la suma de $ 234500
+            p.cl-green print("El salario devengado por \t", empleado, "\tes la \tsuma de $", salario)
+            p.mb-0 El salario devengado por MARIA es la suma de $ 234500
+
+
+    .jumbotron.bg-white     
+      .row
+        .col-12
+          .header-ecored.mt-3#tema2_2
+            h2 2.2 Salida de datos con formato
+      
+      .row
+        .col-12
+          p.mb-5 Python es compatible con la salida de datos con formato. El caracter módulo % es un operador integrado en Python. Este es conocido como el operador de interpolación. Se deben digitar los formatos deseados, el signo % (porcentaje), seguido por paréntesis con los datos que necesitan ser convertidos.
+
+          p La sintaxis de la instrucción es:  
+
+        .col-12.mb-5
+          .jumbotron.mb-0
+            p.mb-0 print (“cadena con formato” % (variables separadas por comas))
+
+        .col-12.mb-5
+          p.mb-0 Se utilizan los siguientes formatos para la salida de datos:
+
+        .col-12.mb-5
+          .jumbotron.mb-0
+            p %c = un caracter
+            p %s = str, cadena de caracteres
+            p %d = int, enteros
+            p.mb-0 %f = float, flotantes
+
+        .col-12.mb-5
+          .console
+            p.cl-gray Ejemplo:
+            p.cl-green titulo = "raíz cuadrada de tres"
+            p.cl-green valor = 3**0.5
+            p.cl-green print ("el resultado de %s es %f "   % (titulo, valor))
+            p.mb-5 el resultado de raíz cuadrada de tres es 1.732051
+            p.cl-green print "Cliente: %s, ¿Activar S o N?: %c"   % ("PatPrimo", "S")
+            p.cl-green Cliente: PatPrimo, ¿Activar S o N?: S
+            p.cl-green >>> print "Nro. factura: %d, Total a pagar: $ %f" % (567, 12500.83)
+            p.mb-0 Nro. factura: 567, Total a pagar: $ 12500.83
+
+        .col-12.mb-5
+          p.mb-0 Es posible controlar el formato de salida, por ejemplo, para obtener el valor con ocho (8) dígitos después del punto decimal, se digita %.8f; para una salida con 2 decimales se digita %.2f
+
+        .col-12 
+          .console
+            p.cl-gray Ejemplo:
+            p.cl-green titulo = "raíz cuadrada de tres"
+            p.cl-green valor = 3**0.5
+            p.cl-green print ("el resultado de %s es %.8f "  % (titulo, valor))   #[span.inline_comment #salida con 8 decimales]
+            p el resultado de raíz cuadrada de tres es 1.73205081
+
+            p.cl-green print ("el resultado de %s es %.1f "  % (titulo, valor))   #[span.inline_comment #salida con 1 decimal]
+            p el resultado de raíz cuadrada de tres es 1.7
+
+
+    .jumbotron.bg-white     
+      .row
+        .col-12
+          .header-ecored.mt-3#tema2_3
+            h2 2.3 Impresión de cadenas
+
+      .row
+        .col-12.mb-5
+          p.mb-0 Las cadenas tienen varias formas de ser impresas en pantalla.  Veamos el siguiente cuadro:
+
+        .col-12.mb-5
+          .jumbotron.mb-0
+            p frase1= “El perro”
+            p frase2= “Manchas”
+            p.mb-0 frase3= “ladra en la oscuridad”
+
+        .col-12
+          img(src="assets/images/pages/tema_2/info_2_3_01.svg", alt="", style="width:100%")
